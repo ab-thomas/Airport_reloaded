@@ -5,10 +5,21 @@ class Airport
   def initialize(name, default_capacity=100)
     @name = name
     @capacity = default_capacity
+    @planes = []
   end
 
   def empty?
-    true
+    @planes.count == 0
+  end
+  
+  def receive(plane)
+    @planes << plane
   end
  
+  def planes_count
+    @planes.count
+  end
+
+
+
 end

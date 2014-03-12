@@ -1,4 +1,5 @@
 require './lib/airport'
+require './lib/plane'
 
   describe 'Airport' do 
 
@@ -23,7 +24,26 @@ require './lib/airport'
       expect(airport).to be_empty
     end 
 
+  context 'control flow' do 
 
+    it 'should receive a plane' do
+      plane = Plane.new("Plane1")
+      airport.receive(plane)
+      expect(airport).not_to be_empty
+    end
+
+ 
+
+
+
+
+
+
+
+
+
+
+  end 
 
   end
 
