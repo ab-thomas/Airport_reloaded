@@ -26,16 +26,22 @@ require './lib/plane'
 
   context 'control flow' do 
 
+    let (:plane) { Plane.new("Plane1") }
+
     it 'should receive a plane' do
-      plane = Plane.new("Plane1")
       airport.receive(plane)
       expect(airport).not_to be_empty
     end
 
- 
+    it 'should release a plane' do
+      airport.release(plane)
+      expect(airport).to be_empty
+    end
 
-
-
+    it 'should know if full' do
+      plane.land
+      expect(airport).to be_full
+    end
 
 
 

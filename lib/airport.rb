@@ -13,6 +13,7 @@ class Airport
   end
   
   def receive(plane)
+    plane.land
     @planes << plane
   end
  
@@ -20,6 +21,12 @@ class Airport
     @planes.count
   end
 
+  def release(plane)
+    @planes.delete(plane)
+  end
 
+  def full?
+    @planes = @capacity
+  end
 
 end
