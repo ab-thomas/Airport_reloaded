@@ -1,6 +1,4 @@
-Repeating Week 3 test
-
-Week 3 Test: Airport
+Week 3 Test: Airport (Repeating Week 3 for a ruby refresher)
 ---------------------
 ###Task:
 
